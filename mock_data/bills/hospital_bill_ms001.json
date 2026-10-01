@@ -1,0 +1,49 @@
+{
+  "case_id": "MS-001",
+  "patient_name": "Rajesh Sharma",
+  "hospital": "MedSure Trust Hospital",
+  "bill_number": "BILL-2026-8941",
+  "bill_date": "2026-09-29",
+  "items": [
+    {
+      "description": "Cardiac ICU Deluxe Room Charges (3 Days)",
+      "amount": 45000.0,
+      "category": "Room & Board",
+      "explanation": "Inpatient ICU bed, telemetry monitoring, oxygen support, and round-the-clock nursing care."
+    },
+    {
+      "description": "Cardiology Senior Consultant Visit",
+      "amount": 2500.0,
+      "category": "Professional Fee",
+      "explanation": "Daily specialist bed-side rounds, stent site assessment, and therapy adjustment."
+    },
+    {
+      "description": "Cardiology Senior Consultant Visit",
+      "amount": 2500.0,
+      "category": "Professional Fee",
+      "explanation": "Duplicate billing line detected for same day specialist evaluation.",
+      "flagged": true,
+      "flag_reason": "Worth asking about: Duplicate consultation line"
+    },
+    {
+      "description": "Drug Eluting Stent (DES - Promus Premier)",
+      "amount": 65000.0,
+      "category": "Implant & Devices",
+      "explanation": "Platinum chromium everolimus-eluting stent under national ceiling price cap."
+    },
+    {
+      "description": "Administrative & Documentation Handling Fee",
+      "amount": 8500.0,
+      "category": "Administrative",
+      "explanation": "Institutional administrative overhead fee.",
+      "flagged": true,
+      "flag_reason": "Worth asking about: Non-medical administrative surcharge"
+    },
+    {
+      "description": "Pharmacy & Post-Op Infusion Medications",
+      "amount": 14500.0,
+      "category": "Pharmacy",
+      "explanation": "Prescribed IV infusions, dual antiplatelets, statins, and gastroprotective agents."
+    }
+  ]
+}

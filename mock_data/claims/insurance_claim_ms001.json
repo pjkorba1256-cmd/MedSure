@@ -1,0 +1,42 @@
+{
+  "case_id": "MS-001",
+  "claim_number": "CLM-2026-001",
+  "insurer": "Star Health & Allied Insurance",
+  "policy_number": "POL-9021882",
+  "status": "DENIED",
+  "denial_reason": "Missing diagnostic investigation reports and incomplete discharge packet page count.",
+  "checklist": [
+    {
+      "document_type": "Discharge Summary",
+      "required": true,
+      "present": true,
+      "page_count": 3,
+      "expected_page_count": 4,
+      "page_count_warning": "Possible missing page detected (3 of 4 pages uploaded)"
+    },
+    {
+      "document_type": "Final Itemized Bill",
+      "required": true,
+      "present": true,
+      "page_count": 2,
+      "expected_page_count": 2,
+      "page_count_warning": null
+    },
+    {
+      "document_type": "Government ID Proof",
+      "required": true,
+      "present": true,
+      "page_count": 1,
+      "expected_page_count": 1,
+      "page_count_warning": null
+    },
+    {
+      "document_type": "Catheterization & ECG Investigation Reports",
+      "required": true,
+      "present": false,
+      "page_count": 0,
+      "expected_page_count": 3,
+      "page_count_warning": "MISSING DOCUMENT"
+    }
+  ]
+}

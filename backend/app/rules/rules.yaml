@@ -1,0 +1,65 @@
+version: "1.0"
+rules:
+  - id: BREATHING_001
+    severity: RED
+    title: "Difficulty Breathing"
+    field: breathing_difficulty
+    operator: eq
+    value: true
+    summary: "Patient reported difficulty breathing during today's check-in."
+
+  - id: PAIN_HIGH_001
+    severity: RED
+    title: "Severe Pain"
+    field: pain
+    operator: gte
+    value: 9
+    summary: "Patient reported severe acute pain (level 9-10/10)."
+
+  - id: PAIN_MODERATE_002
+    severity: AMBER
+    title: "Moderate-High Pain"
+    field: pain
+    operator: gte
+    value: 7
+    summary: "Patient reported elevated pain (level 7-8/10)."
+
+  - id: FEVER_001
+    severity: AMBER
+    title: "Post-Discharge Fever"
+    field: fever
+    operator: eq
+    value: true
+    summary: "Patient reported fever during home recovery."
+
+  - id: DIZZINESS_VOMITING_001
+    severity: AMBER
+    title: "Dizziness or Vomiting"
+    field: compound_dizzy_vomit
+    operator: custom
+    summary: "Patient reported dizziness or vomiting."
+
+keyword_rules:
+  - id: KEYWORD_CHEST_PAIN
+    severity: RED
+    title: "Chest Pain Reported"
+    keywords: ["chest pain", "tightness in chest", "angina", "cardiac"]
+    summary: "Emergency keyword detected in patient notes: Chest Pain."
+
+  - id: KEYWORD_BREATHLESS
+    severity: RED
+    title: "Breathlessness Reported"
+    keywords: ["breathless", "short of breath", "gasping", "suffocating"]
+    summary: "Emergency keyword detected in patient notes: Severe shortness of breath."
+
+  - id: KEYWORD_BLEEDING
+    severity: RED
+    title: "Active Bleeding Reported"
+    keywords: ["bleeding", "hemorrhage", "blood in stool", "coughing blood"]
+    summary: "Emergency keyword detected in patient notes: Bleeding."
+
+  - id: KEYWORD_UNCONSCIOUS
+    severity: RED
+    title: "Loss of Consciousness"
+    keywords: ["unconscious", "passed out", "fainting", "blackout", "collapsed"]
+    summary: "Emergency keyword detected in patient notes: Loss of consciousness or fainting."
